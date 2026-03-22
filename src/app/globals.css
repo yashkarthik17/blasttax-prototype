@@ -36,24 +36,25 @@
 }
 
 body {
-  background: #0F0F1A;
+  background: #FAFAFF;
   font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
   min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
 }
 
-/* Phone Frame */
+/* Phone Frame — full screen mobile, no mockup */
 .phone-frame {
-  width: 375px;
-  height: 812px;
+  width: 100%;
+  max-width: 430px;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0 auto;
   background: #FAFAFF;
-  border-radius: 44px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 0 2px #2A2A40, 0 0 0 6px #1A1A2E, 0 25px 60px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +64,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 28px 8px;
+  padding: env(safe-area-inset-top, 14px) 24px 8px;
   font-size: 0.8rem;
   font-weight: 600;
   color: #1A1A2E;
@@ -94,7 +95,7 @@ body {
 }
 
 .screen-content {
-  padding: 0 20px;
+  padding: 0 20px 90px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -222,15 +223,18 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 8px 0 28px;
-  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 0 env(safe-area-inset-bottom, 20px);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid #F0F0F5;
   flex-shrink: 0;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  max-width: 430px;
+  margin: 0 auto;
   z-index: 20;
 }
 

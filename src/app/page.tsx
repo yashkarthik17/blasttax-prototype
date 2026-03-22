@@ -12,7 +12,7 @@ export default function SplashPage() {
   }, []);
 
   return (
-    <div className="phone-frame" style={{ background: "#1A1A2E" }}>
+    <div className="phone-frame" style={{ background: "#1A1A2E", maxWidth: "100%", width: "100%" }}>
       <div style={{
         position: "absolute", inset: 0,
         background: "radial-gradient(ellipse at 30% 20%, rgba(0,61,165,0.12) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(230,57,70,0.08) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(124,58,237,0.05) 0%, transparent 60%)",
